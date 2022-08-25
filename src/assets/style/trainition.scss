@@ -1,0 +1,48 @@
+// 路由过渡
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s ease-in;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  will-change: transform;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+// 工作台头部弹框
+.workbench-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.workbench-fade-leave-active {
+  transition: all 0.5s ease-in;
+}
+
+.workbench-fade-enter-from,
+.workbench-fade-leave-to {
+  will-change: transform;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+// 列表过渡，上传过渡，删除过渡
+.list-complete-item {
+  transition: all 0.8s ease;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.list-complete-enter-from,
+.list-complete-leave-to {
+  opacity: 0 !important;
+  transform: translateY(20px);
+}
+
+.list-complete-leave-active {
+  position: absolute !important;
+}

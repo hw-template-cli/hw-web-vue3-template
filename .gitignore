@@ -1,3 +1,4 @@
+
 .DS_Store
 node_modules
 /dist
@@ -15,9 +16,16 @@ pnpm-debug.log*
 
 # Editor directories and files
 .idea
-.vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# cache
+.eslintcache
+.stylelintcache
+
+# lock
+package-lock.json
+yarn.lock

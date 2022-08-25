@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: weiyang
+ * @Date: 2022-02-08 15:26:32
+ * @LastEditors: weiyang
+ * @LastEditTime: 2022-02-08 15:26:32
+ */
 module.exports = {
   extends: ["stylelint-config-standard", "stylelint-config-prettier"],
   // add your custom config here
@@ -11,17 +18,45 @@ module.exports = {
     "declaration-block-no-duplicate-properties": true, // 禁止在声明块内出现重复属性
     "no-duplicate-selectors": true, // 不允许重复的选择器
     "no-empty-source": null, // 不允许空的来源
-    "at-rule-no-unknown": [true, {
-      ignoreAtRules: ["extend", "at-root", "debug", "warn", "error", "if", "else", "for", "each", "while", "mixin", "include", "content", "return", "function"]
-    }],
-    "selector-pseudo-class-no-unknown": [true, {
-      ignorePseudoClasses: ["export"]
-    }],
-    "selector-pseudo-element-no-unknown": [true, {
-      ignorePseudoElements: ["v-deep"]
-    }],
-    "property-no-unknown": [true, {
-      ignoreProperties: ["theme", "/^menu/", "/^side/", "/^subMenu/"]
-    }]
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: [
+          "extend",
+          "at-root",
+          "debug",
+          "warn",
+          "error",
+          "if",
+          "else",
+          "for",
+          "each",
+          "while",
+          "mixin",
+          "include",
+          "content",
+          "return",
+          "function"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        ignorePseudoClasses: ["export"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        ignorePseudoElements: ["v-deep"]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        ignoreProperties: ["theme", "/^menu/", "/^side/", "/^subMenu/"]
+      }
+    ]
   }
 };

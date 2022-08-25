@@ -1,10 +1,11 @@
+/*
+ * @Description:
+ * @Author: weiyang
+ * @Date: 2022-02-08 14:58:42
+ * @LastEditors: weiyang
+ * @LastEditTime: 2022-08-25 16:16:41
+ */
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import { DateFormat } from "@royalscome/format";
-import { Plugin } from "vue-fragment";
-
 const app = createApp(App);
-app.config.globalProperties.DateFormat = DateFormat;
-app.use(store).use(router).use(Plugin).mount("#app");
+app.mount("#app");

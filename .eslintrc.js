@@ -3,22 +3,21 @@ module.exports = {
   root: true,
   parserOptions: {
     parser: "babel-eslint",
-    sourceType: "module"
+    sourceType: "module",
+    ecmaVersion: 2020
   },
   env: {
     browser: true,
     node: true,
     es6: true
   },
-  // extends: ["plugin:vue/recommended", "eslint:recommended"],
-  // extends: ["prettier", "prettier/vue", "plugin:vue/essential", "eslint:recommended", "plugin:prettier/recommended"],
-  extends: ["plugin:vue/essential", "eslint:recommended"],
-  // plugins: ["prettier"],
+  extends: ["plugin:vue/vue3-essential", "eslint:recommended", "@vue/prettier"],
 
   // add your custom rules here
   // it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
-    // defineProps: true,
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     // "prettier/prettier": "error",
     // "prettier.eslintIntegration": true,
     "no-undef": 2, // 禁用未声明的变量，除非它们在 /*global */ 注释中被提到. e.g. /* global Stomp SockJS */ in .vue file's <scrpit>
@@ -47,11 +46,9 @@ module.exports = {
     ], // 强制 generator 函数中 * 号周围使用一致的空格
     "no-plusplus": 0, // 禁用一元操作符 ++ 和 --
     "func-names": 0, // 要求或禁止使用命名的 function 表达式
-    "no-console": "off", // no-console
     radix: 0, // 强制在parseInt()使用基数参数
     "no-control-regex": 0, // 禁止在正则表达式中使用控制字符
     "no-continue": 0, // 禁用 continue 语句
-    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
     "no-param-reassign": 0, // 禁止对 function 的参数进行重新赋值
     "no-underscore-dangle": 1, // 禁止标识符中有悬空下划线"_"
     "global-require": 0, // 要求 require() 出现在顶层模块作用域中
@@ -130,13 +127,8 @@ module.exports = {
     "dot-location": [2, "property"], // 强制在点号之前和之后一致的换行
     "eol-last": 2, // 要求或禁止文件末尾存在空行
     "handle-callback-err": [0, "^(err|error)$"], // 要求回调函数中有容错处理
-    indent: [
-      2,
-      2,
-      {
-        SwitchCase: 1
-      }
-    ], // 强制使用一致的缩进
+    indent: "off", // 强制使用一致的缩进
+
     "jsx-quotes": [2, "prefer-double"], // 强制在 JSX 属性中一致地使用双引号或单引号
     "key-spacing": [
       2,
@@ -300,6 +292,6 @@ module.exports = {
     "vue/name-property-casing": ["error", "PascalCase"], // 在Vue组件中对name属性强制使用特定大小写
     "vue/no-v-html": "off", // 禁止使用v-html防止XSS攻
     "vue/no-mutating-props": "off",
-    "vue/no-v-model-argument": "off"
+    "vue/multi-word-component-names": "off"
   }
 };

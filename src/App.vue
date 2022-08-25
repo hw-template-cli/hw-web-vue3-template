@@ -1,12 +1,16 @@
 <!--
  * @Description:
  * @Author: weiyang
- * @Date: 2022-01-10 14:11:58
+ * @Date: 2022-02-08 14:58:42
  * @LastEditors: weiyang
- * @LastEditTime: 2022-01-10 15:20:23
+ * @LastEditTime: 2022-08-25 16:14:52
 -->
 <template>
-  <router-view></router-view>
+  <div>test</div>
 </template>
+
 <script setup></script>
-<style lang="scss"></style>
+<style lang="scss">
+// body {
+// }
+</style>

@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: weiyang
+ * @Date: 2022-02-08 15:25:19
+ * @LastEditors: weiyang
+ * @LastEditTime: 2022-02-08 15:25:19
+ */
 module.exports = {
   printWidth: 120, //一行的字符数，如果超过会进行换行，默认为80
   tabWidth: 2, //一个tab代表几个空格数，默认为80
@@ -9,5 +16,5 @@ module.exports = {
   // parser: "babylon", //代码的解析引擎，默认为babylon，与babel相同。
   endOfLine: "auto", // 设置统一的行结尾样式，保持现有的行尾（通过查看第一行后的内容对一个文件中的混合值进行归一化）
   arrowParens: "avoid", //只有一个参数的箭头函数的参数是否带圆括号（默认avoid不带）
-  eslintIntegration: true, //让prettier使用eslint的代码格式进行校验
+  // eslintIntegration: true, //让prettier使用eslint的代码格式进行校验
 }
